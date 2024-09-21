@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 bg-hero mb-5">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-white mb-md-4">Our Services</h1>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                
+                <a class="col-lg-4 col-md-6" style="cursor:pointer;"id="disease" href="{{url_for('model')}}">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-carrot display-1 text-primary mb-3"></i>
+                        <h4>Plant Disease Scanning</h4>
+                        <p class="mb-0">FARMBYTE plant disease scanning feature equips farmers with a powerful tool for identifying and managing crop diseases promptly. It utilizes image recognition technology to diagnose issues, offering treatment recommendations and preventive measures.</p>
+                    </div>
+                </a>
+                <a class="col-lg-4 col-md-6" style="cursor: pointer;" id="policy" href="{{url_for('policy')}}">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-apple-alt display-1 text-primary mb-3"></i>
+                        <h4>Government Policy Awareness</h4>
+                        <p class="mb-0">FARMBYTE keeps farmers informed about the latest agricultural policies, subsidies, and government schemes. Through real-time updates and notifications, it empowers farmers to make informed decisions, maximize benefits,and ensure regulatory compliances.</p>
+                    </div>
+                </a>
+                <a class="col-lg-4 col-md-6"  style="cursor: pointer;" id="vendor" href="{{url_for('vendor')}}">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-dog display-1 text-primary mb-3"></i>
+                        <h4>Vendors Contact</h4>
+                        <p class="mb-0">FARMBYTE connects farmers with top vendors for seeds, tools, fertilizers, and manure at the best prices. Our platform makes it easy to find quality products and great deals, streamlining your farming needs efficiently.</p>
+                    </div>
+                </a>
+                <a class="col-lg-4 col-md-6" style="cursor: pointer;" id="crop" href="{{url_for('crop')}}">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-tractor display-1 text-primary mb-3"></i>
+                        <h4>Crop Recommendation</h4>
+                        <p class="mb-0">The website offers crop recommendations for the upcoming month, suggests to analyze soil quality before and after planting, and guides nutrient management to help farmers make informed decisions.</p>
+                    </div>
+                </a>
+                <a class="col-lg-4 col-md-6" style="cursor: pointer;" id="modern" href="{{url_for('modern')}}" >
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-seedling display-1 text-primary mb-3"></i>
+                        <h4>Modern Farming Techniques</h4>
+                        <p class="mb-0">The website focuses on teaching and upskilling farmers in advanced methods and modern technologies, organic farming,empowering them to improve efficiency, sustainability, and crop yields.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Testimonial Start -->
+    <!-- Testimonial End -->
+    
+
+{% endblock content %}

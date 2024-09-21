@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 bg-hero mb-5">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-white mb-md-4">Our Services</h1>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                
+                <a class="col-lg-4 col-md-6" style="cursor:pointer;"id="disease" href="{{url_for('modelGuj')}}">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-carrot display-1 text-primary mb-3"></i>
+                        <h4>છોડના રોગોનું સ્કેનિંગ</h4>
+                        <p class="mb-0">ફાર્મબાઇટ છોડના રોગોની સ્કેનિંગ સુવિધા ખેડૂતોને પાકના રોગોને ઓળખવા અને તેનું તાત્કાલિક સંચાલન કરવા માટે એક શક્તિશાળી સાધનથી સજ્જ કરે છે. તે સમસ્યાઓનું નિદાન કરવા, સારવારની ભલામણો અને નિવારક પગલાં ઓફર કરવા માટે ઈમેજ રેકગ્નિશન ટેકનોલોજીનો ઉપયોગ કરે છે..</p>
+                    </div>
+                </a>
+                <a class="col-lg-4 col-md-6" style="cursor: pointer;" id="policy" href="{{url_for('policy')}}">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-apple-alt display-1 text-primary mb-3"></i>
+                        <h4>સરકારની નીતિ જાગૃતિ</h4>
+                        <p class="mb-0">ફાર્મબાઈટ ખેડૂતોને નવીનતમ કૃષિ નીતિઓ, સબસિડીઓ અને સરકારી યોજનાઓ વિશે માહિતગાર રાખે છે. રીઅલ-ટાઇમ અપડેટ્સ અને સૂચનાઓ દ્વારા, તે ખેડૂતોને જાણકાર નિર્ણયો લેવા, મહત્તમ લાભ મેળવવા અને નિયમનકારી પાલનની ખાતરી કરવા માટે સશક્ત બનાવે છે..</p>
+                    </div>
+                </a>
+                <a class="col-lg-4 col-md-6"  style="cursor: pointer;" id="vendor" href="{{url_for('vendor')}}">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-dog display-1 text-primary mb-3"></i>
+                        <h4>ડીલરો સંપર્ક કરો</h4>
+                        <p class="mb-0">ફાર્મબાઈટ ખેડૂતોને શ્રેષ્ઠ ભાવે બિયારણ, સાધનો, ખાતર અને ખાતર માટે ટોચના વિક્રેતાઓ સાથે જોડે છે. અમારું પ્લેટફોર્મ ગુણવત્તાયુક્ત ઉત્પાદનો અને શ્રેષ્ઠ સોદા શોધવાનું સરળ બનાવે છે, તમારી ખેતીની જરૂરિયાતોને અસરકારક રીતે સુવ્યવસ્થિત કરે છે.</p>
+                    </div>
+                </a>
+                <a class="col-lg-4 col-md-6" style="cursor: pointer;" id="crop" href="{{url_for('crop')}}">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-tractor display-1 text-primary mb-3"></i>
+                        <h4>સલાહ આપેલ પાક</h4>
+                        <p class="mb-0">વેબસાઇટ આગામી મહિના માટે પાકની ભલામણો આપે છે, વાવેતર પહેલાં અને પછી જમીનની ગુણવત્તાનું પૃથ્થકરણ કરવાનું સૂચન કરે છે અને ખેડૂતોને માહિતગાર નિર્ણય લેવામાં મદદ કરવા માટે પોષક તત્ત્વોના સંચાલનનું માર્ગદર્શન આપે છે.</p>
+                    </div>
+                </a>
+                <a class="col-lg-4 col-md-6" style="cursor: pointer;" id="modern" href="{{url_for('modern')}}" >
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-seedling display-1 text-primary mb-3"></i>
+                        <h4>આધુનિક ખેતીની તકનીકો</h4>
+                        <p class="mb-0">અમે ફાર્મ બાઈટ પર ખેડૂતોને અદ્યતન પદ્ધતિઓ અને આધુનિક ટેક્નૉલૉજી, સજીવ ખેતી, કાર્યક્ષમતા, ટકાઉપણું અને પાકની ઉપજમાં સુધારો કરવા માટે તેમને સશક્ત બનાવવા પર ધ્યાન કેન્દ્રિત કરીએ છીએ..</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Testimonial Start -->
+    <!-- Testimonial End -->
+    
+
+{% endblock content %}

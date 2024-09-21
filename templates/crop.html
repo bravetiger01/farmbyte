@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 bg-hero mb-5">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-white mb-md-4">Crop Recommendation</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Contact Start -->
+    <!-- Contact End -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crop Recommendations for Gujarat</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            th, td {
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Best Crops for Each Month in Gujarat</h1>
+        <table style="font-weight: bold; color: black;">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Crop</th>
+                    <th>Soil Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>January</td>
+                    <td>Wheat, Mustard</td>
+                    <td>Loamy, Sandy Loam</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>Chickpeas, Cumin</td>
+                    <td>Well-drained Loamy, Sandy Loam</td>
+                </tr>
+                <tr>
+                    <td>March</td>
+                    <td>Pearl Millet, Green Gram (Moong)</td>
+                    <td>Light Sandy Soil</td>
+                </tr>
+                <tr>
+                    <td>April</td>
+                    <td>Cotton, Groundnut</td>
+                    <td>Black Soil for Cotton, Sandy Loam for Groundnut</td>
+                </tr>
+                <tr>
+                    <td>May</td>
+                    <td>Bajra (Pearl Millet), Sesame</td>
+                    <td>Sandy Loam, Well-drained Soil</td>
+                </tr>
+                <tr>
+                    <td>June</td>
+                    <td>Rice, Sorghum</td>
+                    <td>Clayey Soil for Rice, Light Soil for Sorghum</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Pigeon Pea (Tur), Soybean</td>
+                    <td>Medium Black Soil, Well-drained Loam</td>
+                </tr>
+                <tr>
+                    <td>August</td>
+                    <td>Maize, Castor</td>
+                    <td>Loamy, Alluvial Soil</td>
+                </tr>
+                <tr>
+                    <td>September</td>
+                    <td>Guar (Cluster Beans), Cotton</td>
+                    <td>Sandy Loam for Guar, Black Soil for Cotton</td>
+                </tr>
+                <tr>
+                    <td>October</td>
+                    <td>Gram, Mustard</td>
+                    <td>Well-drained Loamy Soil</td>
+                </tr>
+                <tr>
+                    <td>November</td>
+                    <td>Wheat, Garlic</td>
+                    <td>Loamy, Sandy Soil</td>
+                </tr>
+                <tr>
+                    <td>December</td>
+                    <td>Barley, Onions</td>
+                    <td>Loamy Soil, Well-drained Sandy Soil</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Crop Recommendations</h2>
+        <ul>
+            <li style="color: black;"><strong>Cotton:</strong> Best suited for Black Soil, grows well in April and September.</li>
+            <li style="color: black;"><strong>Groundnut:</strong> Prefers Sandy Loam, ideal for sowing from April to June.</li>
+            <li style="color: black;"><strong>Rice:</strong> Grows in Clayey Soil during the monsoon (June).</li>
+        </ul>
+    </body>
+    
+
+
+    {% endblock content %}

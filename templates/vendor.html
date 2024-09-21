@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 bg-hero mb-5">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-white mb-md-4">Dealer List</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Contact Start -->
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealers Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Dealers Information</h2>
+
+<table style="color: black;font-weight: bold;">
+    <thead>
+        <tr>
+            <th>Name of Dealer</th>
+            <th>Business Type</th>
+            <th>Address</th>
+            <th>Mobile Number</th>
+            <th>Products Available</th>
+            <th>Government Subsidy Available</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Rajesh Patel</td>
+            <td>Fertilizer Supplier</td>
+            <td>123, Green Lane, Ahmedabad, Gujarat</td>
+            <td>98515602XX</td>
+            <td>Potash, Implements, Harvesters, Tractor Attachments, Drip Irrigation Kits</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Mehul Agritech</td>
+            <td>Tractor Dealership</td>
+            <td>456, Farm Road, Vadodara, Gujarat</td>
+            <td>98515603XX</td>
+            <td>Urea, Cultivators, Plows, Tractor Attachments, Implements, Drip Irrigation Kits</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Shree Agri Tools</td>
+            <td>Agricultural Tools</td>
+            <td>789, Harvest Street, Rajkot, Gujarat</td>
+            <td>98515604XX</td>
+            <td>Herbicides, Insecticides, Mowers, Rotavators, Hybrid Seeds, Harvesters</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Kiran Agro</td>
+            <td>Irrigation Systems</td>
+            <td>101, Canal Avenue, Surat, Gujarat</td>
+            <td>98515605XX</td>
+            <td>Planters, Hybrid Seeds, Seed Drills, Potash, Plows</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Parth Seeds</td>
+            <td>Seed Distributor</td>
+            <td>202, Crop Drive, Bhavnagar, Gujarat</td>
+            <td>98515606XX</td>
+            <td>Plows, John Deere Tractors, Implements, Herbicides, Cultivators, Seed Drills</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Patel Farm Machinery</td>
+            <td>Machinery Supplier</td>
+            <td>303, Tractor Road, Junagadh, Gujarat</td>
+            <td>98515607XX</td>
+            <td>Hybrid Seeds, Urea, Tractor Attachments, Mowers, Rotavators, Organic Fertilizers</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Vimal Agro Supplies</td>
+            <td>Agro Chemicals</td>
+            <td>404, Pesticide Path, Anand, Gujarat</td>
+            <td>98515608XX</td>
+            <td>DAP, Organic Seeds, Implements, Hybrid Seeds, John Deere Tractors, Harvesters</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Greenland Farming Supplies</td>
+            <td>Organic Farming Supply</td>
+            <td>505, Nature Blvd, Jamnagar, Gujarat</td>
+            <td>98515609XX</td>
+            <td>Sprinkler Systems, Potash, Threshers, Mowers, Organic Seeds</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Gayatri Enterprises</td>
+            <td>Machinery Supplier</td>
+            <td>12345 Gandhi Nagar, Bhavnagar, Gujarat</td>
+            <td>98242759XX</td>
+            <td>Planters, Hybrid Seeds, Seed Drills, Potash, Plows</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Parmar Seeds</td>
+            <td>Seed Distributor</td>
+            <td>B12 Fulak Industrial Park, Alkapuri, Vadodara</td>
+            <td>94087721XX</td>
+            <td>Urea, Cultivators, Plows, Tractor Attachments, Implements, Drip Irrigation Kits</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Mehta Dimitri Distributors</td>
+            <td>Tractor Dealership</td>
+            <td>69 Farmvilla Rowhouses, Mitramanand, Vadodara</td>
+            <td>98515605XX</td>
+            <td>Plows, John Deere Tractors, Implements, Herbicides, Cultivators, Seed Drills</td>
+            <td>Yes</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+<!-- Contact End -->
+
+
+    {% endblock content %}

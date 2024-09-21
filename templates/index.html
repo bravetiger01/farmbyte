@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{{url_for('static',filename='img/carousel-1.jpg')}}" alt="Image">
+                    <div class="carousel-caption top-0 bottom-0 start-0 end-0 d-flex flex-column align-items-center justify-content-center">
+                        <div class="text-start p-5" style="max-width: 900px;">
+                            <h3 class="text-white">ONE STOP FARMING HUB</h3>
+                            <h1 class="display-1 text-white mb-md-4">WELCOME TO FARMBYTE</h1>
+                            <a href="{{url_for('explore')}}" class="btn btn-primary py-md-3 px-md-5 me-3">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Banner Start -->
+    
+    <!-- Banner Start -->
+
+
+    <!-- About Start -->
+    
+    <!-- About End -->
+
+
+    <!-- Facts Start -->
+    
+    <!-- Facts End -->
+    
+
+    <!-- Services Start -->
+    
+    <!-- Services End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid bg-primary feature py-5 pb-lg-0 my-5">
+        <div class="container py-5 pb-lg-0">
+            <div class="mx-auto text-center mb-3 pb-2" style="max-width: 500px;">
+                <h1 class="display-5 text-white">OUR FEATURES!!!</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-3">
+                    <div class="text-white mb-5">
+                        <div class="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-seedling fs-4 text-white"></i>
+                        </div>
+                        <h4 class="text-white">Plant Disease Scanning</h4>
+                        <p class="mb-0">FARMBYTE plant disease scanning feature equips farmers with a powerful tool for identifying and managing crop diseases promptly. It utilizes image recognition technology to diagnose issues, offering treatment recommendations and preventive measures.</p>
+                    </div>
+                   
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-block bg-white h-100 text-center p-5 pb-lg-0">
+                        <img class="img-fluid" src="{{url_for('static',filename='img/farmer-1.jpg')}}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="text-white mb-5">
+                        <div class="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-tractor fs-4 text-white"></i>
+                        </div>
+                        <h4 class="text-white">Modern Farming</h4>
+                        <p class="mb-0">The website focuses on teaching and upskilling farmers in advanced methods and modern technologies, organic farming,empowering them to improve efficiency, sustainability, and crop yields.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+
+
+    
+    
+
+{% endblock content %}

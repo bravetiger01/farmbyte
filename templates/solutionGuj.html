@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 bg-hero mb-5">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-white mb-md-4">ઉકેલો</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="{{file}}" alt="disease">
+    </div>
+    <!-- Hero End -->
+    <div style="margin: 10px; padding: 20px;">
+        <strong style="color: black;" id="solution">{{solution|tojson}}</strong>
+    </div>
+    <script>
+        // Assuming the solution is plain text passed from Flask
+        const solutionContent = `{{ solution | tojson }}`;
+    
+        // Replace new line characters (\n) with <br> to preserve line breaks
+        const formattedContent = solutionContent.replace(/\n/g, '<br>');
+        var newformattedContent = formattedContent.replace(/#/g,"")
+        newformattedContent = newformattedContent.replace(/\*/g,"")
+        newformattedContent = newformattedContent.replace(/"/g,"")
+    
+        // Insert the formatted content into the div
+        document.getElementById('solution').innerHTML = newformattedContent;
+    </script>
+
+    <!-- Contact Start -->
+    <!-- Contact End -->
+
+
+    {% endblock content %}

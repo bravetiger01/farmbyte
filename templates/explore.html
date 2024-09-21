@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .images{
+        margin: 40px;
+        padding: 40px;
+    }
+</style>
+
+<!-- Hero Start -->
+<div class="container-fluid bg-primary py-5 bg-hero mb-5">
+    <div class="container py-5">
+        <div class="row justify-content-start">
+            <div class="col-lg-8 text-center text-lg-start">
+                <h1 class="display-1 text-white mb-md-4">Explore</h1>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+<div class="container-fluid about pt-7">
+    <div class="container">
+        <div class="row gx-7">
+            <div class="col-lg-7 pb-7 images">
+                <div class="mb-3 pb-2">
+                    <h6 class="text-primary text-uppercase">Get to know how we work</h6>
+                    <h1 class="display-5">Our Flowcharts In English</h1>
+                </div>
+                <img src="{{url_for('static',filename='img/farmingmethods english.jpg')}}" alt="farmingmethods"><br><br><br><br><br>
+                <img src="{{url_for('static',filename='img/feature english.jpg')}}" alt="feature"><br><br><br><br><br>
+                <img src="{{url_for('static',filename='img/policies english.jpg')}}" alt="policies"><br>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+<img src="" alt="">
+<img src="" alt="">
+<img src="" alt="">
+
+
+{% endblock content %}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>FARMBYTE</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Favicon -->
+    <link href="{{url_for('static',filename='img/favicon.ico')}}" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{url_for('static',filename='lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" />
+    <style>
+        .dropbtn {
+            background-color: #25bb57;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: rgb(11, 181, 11);
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+        .active{
+            background: var(--secondary);
+        }
+    </style>
+    <script>
+        // Fetch the stored active link ID on page load
+        fetch('/get_active_link')
+        .then(response => response.json())
+        .then(data => {
+            const linkId = data.linkId;
+            if (linkId) {
+                const activeLink = document.getElementById(linkId);
+                if (activeLink) {
+                    document.querySelectorAll('.navbarlink').forEach(item => item.classList.remove('active'));
+                    if(window.location.href == activeLink.href || activeLink.id in window.location.href){
+                        activeLink.classList.add('active');
+                    }
+                }
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    </script>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid px-5 d-none d-lg-block">
+        <div class="row gx-5 py-3 align-items-center">
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center justify-content-start">
+                    <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
+                    <h2 class="mb-0">+91 7043456778</h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex align-items-center justify-content-center">
+                    <a href="{{url_for('home')}}" class="navbar-brand ms-lg-5">
+                        <h1 class="m-0 display-4 text-primary">
+                            <span class="text-secondary">Farm</span>Byte
+                        </h1>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="d-flex align-items-center justify-content-end">
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                    <div class="dropdown px-5">
+                        <button onclick="myFunction()" class="dropbtn">
+                            Choose Language
+                        </button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="{{url_for('english')}}">English</a>
+                            <a href="{{url_for('homeGuj')}}">Gujarati</a>
+                        </div>
+                    </div>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link pancake-btn" style="text-align: center" href="{{url_for('login')}}">
+                                LogIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-5">
+        <a href="{{url_for('home')}}" class="navbar-brand d-flex d-lg-none">
+            <h1 class="m-0 display-4 text-secondary">
+                <span class="text-white">Farm</span>Byte
+            </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="{{url_for('home')}}" id="HomeNav" class="nav-item nav-link navbarlink active">Home</a>
+                <a href="{{url_for('about')}}" id="AboutNav" class="nav-item nav-link navbarlink">About</a>
+                <a href="{{url_for('service')}}" id="ServiceNav" class="nav-item nav-link navbarlink">Service</a>
+                <a href="{{url_for('contact')}}" id="ContactNav" class="nav-item nav-link navbarlink">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    {% block content %} {% endblock content %}
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-footer bg-primary text-white mt-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <h4 class="text-white mb-4">Get In Touch</h4>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-white me-2"></i>
+                                <p class="text-white mb-0">
+                                    19 Shri Ram Nagar,Vadodara,Gujarat
+                                </p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-white me-2"></i>
+                                <p class="text-white mb-0">farmbyte@gmail.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-white me-2"></i>
+                                <p class="text-white mb-0">+091 7043456778</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-secondary btn-square rounded-circle" href="#"><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white mb-2" href="#"><i
+                                        class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                                <a class="text-white mb-2" href="#"><i
+                                        class="bi bi-arrow-right text-white me-2"></i>About
+                                    Us</a>
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our
+                                    Services</a>
+                                <a class="text-white mb-2" href="#"><i
+                                        class="bi bi-arrow-right text-white me-2"></i>Features</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <h4 class="text-white mb-4">Popular Links</h4>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white mb-2" href="#"><i
+                                        class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                                <a class="text-white mb-2" href="#"><i
+                                        class="bi bi-arrow-right text-white me-2"></i>About
+                                    Us</a>
+                                <a class="text-white mb-2" href="#"><i class="bi bi-arrow-right text-white me-2"></i>Our
+                                    Services</a>
+                                <a class="text-white mb-2" href="#"><i
+                                        class="bi bi-arrow-right text-white me-2"></i>Features</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">
+                &copy; <a class="text-secondary fw-bold" href="#">FARMBYTE</a>. All
+                Rights Reserved.
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{{url_for('static',filename='lib/easing/easing.min.js')}}"></script>
+    <script src="{{url_for('static',filename='lib/waypoints/waypoints.min.js')}}"></script>
+    <script src="{{url_for('static',filename='lib/counterup/counterup.min.js')}}"></script>
+    <script src="{{url_for('static',filename='lib/owlcarousel/owl.carousel.min.js')}}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+    <script type="text/javascript">
+        /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches(".dropbtn")) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains("show")) {
+                        openDropdown.classList.remove("show");
+                    }
+                }
+            }
+        };
+        document.querySelectorAll('.navbarlink').forEach(link => {
+            console.log(link)
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.navbarlink').forEach(item => item.classList.remove('active'));
+                console.log(this.classList);
+                this.classList.add('active');
+                console.log(this.classList);
+                fetch('/change_color', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ linkId: this.id }) // Sending the ID of the clicked link
+                })
+            });
+        });
+    </script>
+</body>
+
+</html>

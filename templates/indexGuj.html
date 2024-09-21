@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{{url_for('static',filename='img/carousel-1.jpg')}}" alt="Image">
+                    <div class="carousel-caption top-0 bottom-0 start-0 end-0 d-flex flex-column align-items-center justify-content-center">
+                        <div class="text-start p-5" style="max-width: 900px;">
+                            <h3 class="text-white">વન સ્ટોપ ફાર્મિંગ હબ</h3>
+                            <h1 class="display-1 text-white mb-md-4">આપનું સ્વાગત છે ફાર્મબાઈટ મા</h1>
+                            <a href="{{url_for('exploreGuj')}}" class="btn btn-primary py-md-3 px-md-5 me-3">અન્વેષણ કરો</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Banner Start -->
+    
+    <!-- Banner Start -->
+
+
+    <!-- About Start -->
+    
+    <!-- About End -->
+
+
+    <!-- Facts Start -->
+    
+    <!-- Facts End -->
+    
+
+    <!-- Services Start -->
+    
+    <!-- Services End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid bg-primary feature py-5 pb-lg-0 my-5">
+        <div class="container py-5 pb-lg-0">
+            <div class="mx-auto text-center mb-3 pb-2" style="max-width: 500px;">
+                <h1 class="display-5 text-white">અમારી વિશેષતાઓ!!!</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-3">
+                    <div class="text-white mb-5">
+                        <div class="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-seedling fs-4 text-white"></i>
+                        </div>
+                        <h4 class="text-white">છોડના રોગોનું સ્કેનિંગ</h4>
+                        <p class="mb-0">ફાર્મબાઈટ પ્લાન્ટ ડિસીઝ સ્કેનિંગ ફીચર ખેડૂતોને પાકના રોગોની ઓળખ અને વ્યવસ્થાપન માટે એક શક્તિશાળી સાધનથી સજ્જ કરે છે. તે સમસ્યાઓનું નિદાન કરવા, સારવારની ભલામણો અને નિવારક પગલાં ઓફર કરવા માટે ઈમેજ રેકગ્નિશન ટેક્નોલોજીનો ઉપયોગ કરે છે.
+                        </p>
+                        </div>
+                   
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-block bg-white h-100 text-center p-5 pb-lg-0">
+                        <img class="img-fluid" src="{{url_for('static',filename='img/farmer-1.jpg')}}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="text-white mb-5">
+                        <div class="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-tractor fs-4 text-white"></i>
+                        </div>
+                        <h4 class="text-white">આધુનિક ખેતી</h4>
+                        <p class="mb-0"> વેબસાઈટ ખેડૂતોને અદ્યતન પદ્ધતિઓ અને આધુનિક ટેક્નોલોજી, સજીવ ખેતી, કાર્યક્ષમતા, ટકાઉપણું અને પાકની ઉપજમાં સુધારો કરવા માટે સશક્ત બનાવવા પર ધ્યાન કેન્દ્રિત કરે છે.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+
+
+    
+    
+
+{% endblock content %}

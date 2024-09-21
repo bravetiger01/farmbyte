@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Other tags -->
+  <meta name="dicoding:email" content="ykbintang07@gmail.com">
+  <!-- Other tags -->
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='images/groco.ico') }}">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/model1.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/model2.css') }}">
+  <title>મોડેલ</title>
+
+
+</head>
+<body>
+
+
+  <main>
+    <p id="tittlemain"></i>રોગની તપાસ</p>
+    <div id="submain">તમારા છોડ અથવા પાકનો ફોટો અહીં અપલોડ કરો અને ઉકેલ મેળવો </div>
+    <form method="POST" action="{{url_for('model')}}" id="uploadform" enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+      <label for="images" class="containermain">
+        <span class="drop-title">Drop files here</span>
+        <!-- <input type="file" name="file" id="images" accept="image/*" onchange="UPLOAD()" required> -->
+        {{form.photo(id='file-input')}}
+        {{form.submit}}
+      </label>
+    </form>
+  </main>
+
+</body>
+</html>
